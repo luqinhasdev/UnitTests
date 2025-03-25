@@ -1,4 +1,4 @@
-import {sum, subtraction, multiplication, division} from "./calculator.js"
+import {sum, subtraction, multiplication, division, factorial, isPrime, vogalCount, stringInversion, calculateAverage} from "./calculator.js"
 import {test, expect} from "vitest";
 
 test("sum", () => {
@@ -16,3 +16,23 @@ test("multiplication", () => {
 test("division", () => {
     expect(division(2, 2)).toBe(1)})
     expect(()=> division(2, 0)).toThrow(">:C");
+
+test("factorial", () => {
+    expect(factorial(2)).toBe(2);
+})
+
+test("isPrime", () => {
+    expect(isPrime(2)).toBe(true);
+})
+
+test("vogalCount", () => {
+    expect(vogalCount("SOL")).toBe(1);
+})
+
+test("stringInversion", () => {
+    expect(stringInversion("SOL")).toBe("LOS")
+})
+
+test("calculateAverage", () => {
+    expect(calculateAverage([10, 10, 10])).toBe(10)
+})
